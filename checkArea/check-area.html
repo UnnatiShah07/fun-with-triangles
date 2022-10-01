@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check Area</title>
+        <link rel="stylesheet" href="./../style.css" />
+    </head>
+    <body>
+        <nav class="header">
+            <div style="display: flex; align-items: center;">
+                <a href="/index.html">Is Triangle?</a>
+                <a href="/triangleQuiz/triangle-quiz.html">Quiz</a>
+                <a href="/calculateHypotenuse/calculate-hypotenuse.html">Hypotenuse</a>
+                <a href="check-area.html" class="active-header">Area</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Check Area of a Triangle ⚠️</h1>
+            <h3 style="margin-bottom: 3rem">
+                Area of a triangle = 1/2(Base * Height)
+            </h3>
+            <label>Base (in cm)</label>
+            <input type="number" id="base" />
+            <label>Height (in cm)</label>
+            <input type="number" id="height" />
+            <button id="area-btn">Check Area</button>
+            <p id="output"></p>
+        </div>
+
+        <script src="./check-area.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculate Hypotenuse</title>
+        <link rel="stylesheet" href="./../style.css" />
+    </head>
+    <body>
+        <nav class="header">
+            <div style="display: flex; align-items: center;">
+                <a href="/index.html">Is Triangle?</a>
+                <a href="/triangleQuiz/triangle-quiz.html">Quiz</a>
+                <a href="calculate-hypotenuse.html" class="active-header">Hypotenuse</a>
+                <a href="/checkArea/check-area.html">Area</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Calculate Hypotenuse 📐</h1>
+            <h3 style="margin-bottom: 3rem;">Formula for Hypotenuse = sqrt (a² + b²)</h3>
+            <label>Enter value for a :</label>
+            <input type="number" id="side-input" />
+            <label>Enter value for b :</label>
+            <input type="number" id="side-input" />
+            <button id="hypotenuse-btn">Calculate Hypotenuse</button>
+            <p id="output"></p>
+        </div>
+
+        <script src="./calculate-hypotenuse.js"></script>
+    </body>
+</html>
