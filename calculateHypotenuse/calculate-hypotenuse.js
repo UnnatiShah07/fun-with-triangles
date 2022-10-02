@@ -9,12 +9,16 @@ function calculateSumOfSquares(a, b) {
 }
 
 function calculateHypotenuse() {
-    const sumOfSquares = calculateSumOfSquares(
-        Number(sideInputs[0].value),
-        Number(sideInputs[1].value)
-    );
-    const c = Math.sqrt(sumOfSquares);
-    output.innerText = "The length of hypotenuse is : " + c;
+    if (Number(sideInputs[0].value) < 0 || Number(sideInputs[1].value < 0)) {
+        output.innerText = "You can enter only positive angle as input.";
+    } else {
+        const sumOfSquares = calculateSumOfSquares(
+            Number(sideInputs[0].value),
+            Number(sideInputs[1].value)
+        );
+        const c = Math.sqrt(sumOfSquares);
+        output.innerText = "The length of hypotenuse is : " + c;
+    }
 }
 
 hypotenuseBtn.addEventListener("click", calculateHypotenuse);

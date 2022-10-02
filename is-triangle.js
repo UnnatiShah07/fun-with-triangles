@@ -8,16 +8,27 @@ function calculateSumOfAngles(angle1, angle2, angle3) {
 }
 
 function isTriangle() {
-    const sumOfAngles = calculateSumOfAngles(
-        Number(inputs[0].value),
-        Number(inputs[1].value),
-        Number(inputs[2].value)
-    );
-    if (sumOfAngles === 180) {
-        output.innerText = "Yay, The angles form a triangle 🔺";
+    if (
+        Number(inputs[0].value) < 0 ||
+        Number(inputs[1].value) < 0 ||
+        Number(inputs[2].value) < 0
+    ) {
+        output.innerText = "You can enter only positive angle as input.";
     } else {
-        if (sumOfAngles === 0) output.innerText = "Please enter all fields ☹️";
-        else output.innerText = "Oh! , The angles does not form a triangle 🤪";
+        const sumOfAngles = calculateSumOfAngles(
+            Number(inputs[0].value),
+            Number(inputs[1].value),
+            Number(inputs[2].value)
+        );
+        if (sumOfAngles === 180) {
+            output.innerText = "Yay, The angles form a triangle 🔺";
+        } else {
+            if (sumOfAngles === 0)
+                output.innerText = "Please enter all fields ☹️";
+            else
+                output.innerText =
+                    "Oh! , The angles does not form a triangle 🤪";
+        }
     }
 }
 

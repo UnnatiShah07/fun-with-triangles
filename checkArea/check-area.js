@@ -9,12 +9,16 @@ function calculateMultiplication(a, b) {
 }
 
 function calculateHypotenuse() {
-    const multiplication = calculateMultiplication(
-        Number(base.value),
-        Number(height.value)
-    );
-    const area = multiplication / 2;
-    output.innerText = "The area of triangle is : " + area + " cm²";
+    if (Number(base.value) < 0 || Number(height.value) < 0) {
+        output.innerText = "You can enter only positive numbers as input.";
+    } else {
+        const multiplication = calculateMultiplication(
+            Number(base.value),
+            Number(height.value)
+        );
+        const area = multiplication / 2;
+        output.innerText = "The area of triangle is : " + area + " cm²";
+    }
 }
 
 areaBtn.addEventListener("click", calculateHypotenuse);
